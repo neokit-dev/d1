@@ -1,6 +1,6 @@
 import { access, defaultPluginOptions, type Plugin, type PluginOptions } from '@neokit-dev/core';
 import { defaultNamespace as rns, id as rid, RelationalPlugin } from '@neokit-dev/relational';
-import { D1Database } from '@cloudflare/workers-types';
+import type { D1Database } from '@cloudflare/workers-types';
 
 export const id = 'dev.neokit.d1';
 export const defaultNamespace = `${rns}-d1`;

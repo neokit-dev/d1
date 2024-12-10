@@ -1,6 +1,6 @@
 {
 	"name": "@neokit-dev/d1",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run package",
@@ -33,6 +33,7 @@
 		"svelte": "^5.0.0"
 	},
 	"devDependencies": {
+		"@cloudflare/workers-types": "^4.20241205.0",
 		"@eslint/compat": "^1.2.3",
 		"@sveltejs/adapter-auto": "^3.0.0",
 		"@sveltejs/kit": "^2.9.0",
@@ -53,7 +54,6 @@
 	},
 	"dependencies": {
 		"@neokit-dev/core": "^2.0.0",
-		"@neokit-dev/relational": "^1.0.0",
-		"@cloudflare/workers-types": "^4.20241205.0"
+		"@neokit-dev/relational": "^1.0.0"
 	}
 }
