@@ -11,11 +11,15 @@ export const requires = {
 };
 
 export class D1Plugin extends RelationalPlugin {
+	db;
+
 	constructor(options: D1PluginOptions) {
-		super({
-			queryFn: async (query) => (await options.db.prepare(query).bind().run()).results,
-			...options
-		});
+		super({ queryFn: async (s: string) => ([{ s }]), ...options });
+		this.db = options.db;
+	}
+
+	async query(q: string, ...p: unknown[]): Promise<Record<string, unknown>[]> {
+		return (await this.db.prepare(q).bind(...p).run()).results;
 	}
 }
 
