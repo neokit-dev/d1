@@ -37,9 +37,9 @@ export function plugin(options: D1PluginOptions): Plugin {
 		apiVersion,
 		plugin: new D1Plugin(options),
 		requires,
+		onLoaded: () => inject(rid, options.relationalNamespace || rns, p.plugin),
 		...defaultPluginOptions(options, { namespace: defaultNamespace }),
 	};
-	inject(rid, options.relationalNamespace || rns, p.plugin);
 	return p;
 }
 
