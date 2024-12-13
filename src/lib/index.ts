@@ -48,5 +48,5 @@ export function query(q: string, ...p: unknown[]): Promise<Record<string, unknow
 }
 
 export function namespace(namespace: string): D1Plugin {
-  return access(id)[namespace].plugin as D1Plugin;
+  return access(rid)[namespace].plugin as D1Plugin;
 }
